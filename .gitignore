@@ -1,0 +1,17 @@
+#Intellij
+.idea
+.ideaDataSource
+*.ipr
+*/out/*
+
+#Sonar
+.sonar
+
+#Gradle
+.gradle
+**/build/
+
+#Java
+*.log
+*.class
+*.patch

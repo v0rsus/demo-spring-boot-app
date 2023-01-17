@@ -1,0 +1,254 @@
+{
+	"info": {
+		"_postman_id": "57165a0b-0d26-4b22-b006-5cbd68437a9c",
+		"name": "musala",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24904864"
+	},
+	"item": [
+		{
+			"name": "/drone/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"serialNumber\":\"serial\",\"model\":\"HEAVYWEIGHT\",\"weight\":100,\"batteryCapacity\":100,\"state\":\"LOADING\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9080/app/drone/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9080",
+					"path": [
+						"app",
+						"drone",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/drone/load",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"droneSerialNumber\": \"gettherefast\",\r\n    \"medicationCodes\": [\r\n        \"001_ASP_z5\",\r\n        \"101_LEVXN\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9080/app/drone/load",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9080",
+					"path": [
+						"app",
+						"drone",
+						"load"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/drone/unload",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9080/app/drone/unload?serialNumber=gettherefast",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9080",
+					"path": [
+						"app",
+						"drone",
+						"unload"
+					],
+					"query": [
+						{
+							"key": "serialNumber",
+							"value": "gettherefast"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/drone/healthCheck",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9080/app/drone/healthCheck",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9080",
+					"path": [
+						"app",
+						"drone",
+						"healthCheck"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "drone/getAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9080/app/drone/getAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9080",
+					"path": [
+						"app",
+						"drone",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "drone/checkLoaded",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9080/app/drone/checkLoaded?serialNumber=gettherefast",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9080",
+					"path": [
+						"app",
+						"drone",
+						"checkLoaded"
+					],
+					"query": [
+						{
+							"key": "serialNumber",
+							"value": "gettherefast"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "drone/getAvailable",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9080/app/drone/getAvailable",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9080",
+					"path": [
+						"app",
+						"drone",
+						"getAvailable"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "drone/checkBattery",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9080/app/drone/checkBattery?serialNumber=gettherefast",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9080",
+					"path": [
+						"app",
+						"drone",
+						"checkBattery"
+					],
+					"query": [
+						{
+							"key": "serialNumber",
+							"value": "gettherefast"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/drone/create?serialNumber=gettherefast&model=MIDDLEWEIGHT",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9080/app/drone/create?serialNumber=gettherefast&model=MIDDLEWEIGHT",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9080",
+					"path": [
+						"app",
+						"drone",
+						"create"
+					],
+					"query": [
+						{
+							"key": "serialNumber",
+							"value": "gettherefast"
+						},
+						{
+							"key": "model",
+							"value": "MIDDLEWEIGHT"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
